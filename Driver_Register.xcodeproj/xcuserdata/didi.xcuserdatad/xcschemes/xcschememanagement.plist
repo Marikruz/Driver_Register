@@ -7,7 +7,25 @@
 		<key>Driver_Register.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0A5C49D725BE659300CFBE60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A5C49F225BE659500CFBE60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A5C49FD25BE659500CFBE60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
