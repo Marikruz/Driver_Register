@@ -94,6 +94,8 @@ BOOL checkABNNoFlag;
     self.basicpageconfig_path = [BasicPageConfig_req getPath];
     NSData *data = [NSData dataWithContentsOfFile:self.basicpageconfig_path];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSError *error;
+    NSLog(@"error: %@", error);
     self.basicPageConfigModel = [[BasicPageConfigModel alloc] initWithDictionary:json error:nil];
 }
 

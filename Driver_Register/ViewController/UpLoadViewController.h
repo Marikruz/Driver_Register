@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UpLoadViewController : UIViewController
+@interface UpLoadViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 
 /*
  status:

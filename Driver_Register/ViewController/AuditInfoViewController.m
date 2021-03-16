@@ -23,14 +23,16 @@ extern NSString *font;
 @property (nonatomic, strong) AuditInfo_req *auditinfo_req;
 @property (nonatomic, copy) NSString *auditinfo_path;
 @property (nonatomic, strong) AuditInfoModel *auditinfomodel;
-
+//bannerView:顶部背景栏和文字说明
 @property (nonatomic, strong) UIView *bannerView;
-@property (nonatomic, strong) UITableView *auditinfoView;
 @property (nonatomic, assign) int banner_height;
+//auditinfoView:表单视图
+@property (nonatomic, strong) UITableView *auditinfoView;
+//banner_imgview:顶部中间图片框
 @property (nonatomic, strong) UIImageView *banner_imgview;
+//labelview:描述文字标题和说明视图
 @property (nonatomic, strong) UIView *labelview;
 @property (nonatomic, assign) int label_height;
-@property (nonatomic, assign) int banner_imgview_height;
 @property (nonatomic, strong) UILabel *banner_title;
 @property (nonatomic, strong) UILabel *banner_desc;
 
@@ -110,7 +112,7 @@ extern NSString *font;
 }
 
 - (int)banner_imgview_height {
-    return self.banner_height*0.3;
+    return 80;
 }
 
 - (int)label_height {
@@ -121,10 +123,12 @@ extern NSString *font;
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     self.bannerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.banner_height)];
-    self.bannerView.backgroundColor = [UIColor colorWithRed:238.0/255.0 green:122.0/255.0 blue:61.0/255.0 alpha:1];
+    //self.bannerView.backgroundColor = [UIColor colorWithRed:238.0/255.0 green:122.0/255.0 blue:61.0/255.0 alpha:1];
+    self.bannerView.backgroundColor = [UIColor colorWithRed:148.0/255.0 green:160.0/255.0 blue:178.0/255.0 alpha:1];
     
     self.labelview = [[UIView alloc]initWithFrame:CGRectMake(0, self.banner_height-self.label_height, self.view.bounds.size.width, self.label_height)];
     self.labelview.backgroundColor = [UIColor colorWithRed:242.0/255.0 green:242.0/255.0 blue:245.0/255.0 alpha:1];
+
     int blank_height_top = 25;
     int blank_height_left = 20;
     self.banner_title = [[UILabel alloc] initWithFrame:CGRectMake(blank_height_left, blank_height_top, self.view.bounds.size.width-blank_height_left*2, 80)];
@@ -154,8 +158,9 @@ extern NSString *font;
     [self.bannerView addSubview:self.labelview];
     
     self.banner_imgview = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width/2-self.banner_imgview_height/2, (self.banner_height-self.label_height)/2, self.banner_imgview_height, self.banner_imgview_height)];
-    self.banner_imgview.backgroundColor = [UIColor redColor];
-    [self.banner_imgview setImage:[UIImage imageNamed:@"sun1.jpg"]];
+    self.banner_imgview.backgroundColor = [UIColor clearColor];
+    //[self.banner_imgview setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://img0.didiglobal.com/static/nskypub/register/audit_global_wait@2x.52b9a45c.png"]]]];
+    [self.banner_imgview setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://img0.didiglobal.com/static/nskypub/register/audit-ing@2x.1b1b3bff.png"]]]];
     [self.bannerView addSubview:self.banner_imgview];
     return self.bannerView;
 }

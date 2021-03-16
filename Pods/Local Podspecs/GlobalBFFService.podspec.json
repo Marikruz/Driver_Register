@@ -1,0 +1,33 @@
+{
+  "name": "GlobalBFFService",
+  "version": "0.1.0",
+  "summary": "A short description of GlobalBFFService.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://git.xiaojukeji.com/global/GlobalBFFService",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "linkun": "linkun@didichuxing.com"
+  },
+  "source": {
+    "git": "https://git.xiaojukeji.com/global/GlobalBFFService.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": [
+    "GlobalBFFService/Classes/**/*",
+    "GlobalBFFService/Classes/**/**/*"
+  ],
+  "dependencies": {
+    "JSONModel": [
+
+    ],
+    "ONENetworking": [
+
+    ]
+  }
+}
